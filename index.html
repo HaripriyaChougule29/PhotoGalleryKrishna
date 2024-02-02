@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Zoomable Image Gallery</title>
+</head>
+<body>
+  <div class="gallery-container">
+    <div class="gallery">
+      <div class="gallery-item" onclick="openModal('k1.jpg')">
+        <img src="k1.jpg" alt="Image 1">
+      </div>
+      <div class="gallery-item" onclick="openModal('k2.jpg')">
+        <img src="k2.jpg" alt="Image 2">
+      </div>
+      <div class="gallery-item" onclick="openModal('k3.avif')">
+        <img src="k3.avif" alt="Image 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('k4.jpg')">
+        <img src="k4.jpg" alt="Image 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('k5.jpg')">
+        <img src="k5.jpg" alt="Image 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('k6.jpg')">
+        <img src="k6.jpg" alt="Image 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('k7.jpg')">
+        <img src="k7.jpg" alt="Image 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('k8.jpg')">
+        <img src="k8.jpg" alt="Image 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('k9.jpg')">
+        <img src="k9.jpg" alt="Image 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('k10.jpg')">
+        <img src="k10.jpg" alt="Image 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('k11.jpg')">
+        <img src="k11.jpg" alt="Image 3">
+      </div>
+
+
+
+
+    </div>
+
+    <div class="modal" id="imageModal">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+  </div>
+
+  <script >
+
+function openModal(imageSrc) {
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+
+  modal.style.display = 'block';
+  modalImage.src = imageSrc;
+}
+
+function closeModal() {
+  const modal = document.getElementById('imageModal');
+  modal.style.display = 'none';
+}
+
+window.onclick = function (event) {
+  const modal = document.getElementById('imageModal');
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};
+
+  </script>
+</body>
+
+</html>
